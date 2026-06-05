@@ -1,195 +1,131 @@
 # DecodeLabsInternshipTask1
 
-# Data Cleaning & Preparation Project
+# Data Cleaning & Preparation using Python
 
-## Project Overview
-This project was completed as part of the DecodeLabs Data Analytics Industrial Training Program (Project 1). The main objective was to clean and prepare a raw dataset by identifying and handling missing values, removing duplicate records, correcting data inconsistencies, and ensuring proper formatting for analysis.
+# Project Overview
 
-Data cleaning is one of the most important stages in the data analytics process because accurate analysis depends on high-quality and reliable data.
+This project was completed as part of the DecodeLabs Data Analytics Industrial Training Program. The main objective was to clean and prepare a raw dataset by handling missing values, removing duplicates, fixing inconsistencies, and standardizing formats using Python.
 
----
+Data quality is essential in analytics because accurate insights depend on clean and reliable data. This project demonstrates how raw data can be transformed into a structured, analysis-ready format using Python.
 
-## Project Objective
+# Project Objectives
 
-The goal of this project was to:
+The main goals of this project were:
 
-- Identify and handle missing values
-- Detect and remove duplicate records
-- Correct incorrect or inconsistent data
-- Standardize data formats
-- Prepare the dataset for further analysis and visualization
-- Improve overall data quality and reliability
+* Identify missing or null values
+* Handle missing data appropriately
+* Detect and remove duplicate records
+* Correct inconsistent or incorrect data
+* Standardize column names and formats
+* Convert data types (especially date fields)
+* Improve overall data quality
+* Prepare dataset for Exploratory Data Analysis (EDA)
 
----
+# Dataset Description
 
-## Dataset Information
+The dataset contains customer order and transaction data from an e-commerce platform.
 
-The dataset contains customer order information from an e-commerce platform.
+# Dataset Features
 
-### Features Included
+* Order ID
+* Date
+* Customer ID
+* Product Name
+* Quantity
+* Unit Price
+* Shipping Address
+* Payment Method
+* Order Status
+* Tracking Number
+* Items in Cart
+* Coupon Code
+* Referral Source
+* Total Price
 
-| Column Name | Description |
-|------------|-------------|
-| OrderID | Unique order identifier |
-| Date | Order date |
-| CustomerID | Unique customer identifier |
-| Product | Product purchased |
-| Quantity | Number of units ordered |
-| UnitPrice | Price per unit |
-| ShippingAddress | Customer shipping address |
-| PaymentMethod | Method used for payment |
-| OrderStatus | Current order status |
-| TrackingNumber | Shipment tracking number |
-| ItemsInCart | Total items in cart |
-| CouponCode | Applied discount code |
-| ReferralSource | Source of customer referral |
-| TotalPrice | Total order amount |
+# Technologies Used
 
----
+* Python 
+* Pandas
+* NumPy
+* Google Colab
+* CSV & Excel File Handling
 
-## Data Cleaning Tasks Performed
+# Python Libraries Used
 
-### 1. Missing Value Handling
+# Pandas
 
-The dataset was examined for missing or null values.
+Used for:
 
-Actions performed:
+* Data loading and inspection
+* Handling missing values
+* Removing duplicates
+* Data transformation
+* Exporting cleaned dataset
 
-- Identified blank cells and missing entries.
-- Replaced missing values where appropriate.
-- Ensured important columns contained valid data.
-- Verified that no critical fields remained empty.
+# NumPy
 
----
+Used for:
 
-### 2. Duplicate Record Removal
+* Numerical operations
+* Supporting data preprocessing tasks
 
-Duplicate records can lead to incorrect analysis.
+# Data Cleaning Process
 
-Actions performed:
+1. Load Dataset
 
-- Checked the dataset for duplicate rows.
-- Identified repeated records.
-- Removed duplicate entries.
-- Verified dataset uniqueness after cleaning.
+2. Explore Dataset
 
----
+3. Handle Missing Values
 
-### 3. Data Format Standardization
+4. Remove Duplicates
 
-Different data formats create inconsistencies during analysis.
+5. Standardize Column Names
 
-Actions performed:
+6. Convert Data Types
 
-#### Date Formatting
-- Converted dates into a consistent format.
-- Removed invalid date entries.
-- Ensured all dates followed the same standard.
+7. Export Cleaned Dataset
 
-#### Text Formatting
-- Standardized text values.
-- Removed unnecessary spaces.
-- Corrected capitalization inconsistencies.
 
-#### Numeric Formatting
-- Verified numerical columns.
-- Corrected invalid values.
-- Ensured quantities and prices used proper numeric formats.
+# Project Workflow
 
----
-
-### 4. Data Validation
-
-After cleaning, validation checks were performed:
-
-- No duplicate Order IDs
-- Consistent date formatting
-- Proper numeric values
-- Valid categorical values
-- Clean and analysis-ready dataset
-
----
-
-## Tools Used
-
-### Microsoft Excel
-
-The following Excel features were used:
-
-- Filter
-- Sort
-- Find & Replace
-- Remove Duplicates
-- Conditional Formatting
-- Data Validation
-
----
-
-## Project Workflow
-
-1. Load raw dataset
-2. Inspect dataset structure
+1. Import dataset
+2. Inspect data structure
 3. Identify missing values
-4. Remove duplicates
-5. Correct formatting issues
-6. Validate cleaned data
-7. Save cleaned dataset
-8. Prepare dataset for analysis
+4. Handle missing data
+5. Remove duplicates
+6. Standardize column names
+7. Convert data types
+8. Validate cleaned data
+9. Export final dataset
 
----
+# Results
 
-## Final Output
+After cleaning:
 
-The project produced a cleaned dataset that:
+* Missing values were handled
+* Duplicate records were removed
+* Column names were standardized
+* Date formats were corrected
+* Dataset became consistent and structured
+* Data is now ready for EDA and visualization
 
-- Contains consistent records
-- Has no duplicate entries
-- Uses standardized formats
-- Is ready for Exploratory Data Analysis (EDA)
-- Can be used for visualization and reporting
+# Output
 
----
+The final output is a cleaned dataset:
 
-## Learning Outcomes
+✔ Free from duplicates
+✔ Standardized format
+✔ Missing values handled
+✔ Ready for EDA
+✔ Suitable for analytics and machine learning
 
-Through this project, the following skills were developed:
 
-- Data Cleaning
-- Data Preparation
-- Data Quality Assessment
-- Excel Data Handling
-- Missing Value Treatment
-- Duplicate Detection
-- Data Validation
-- Analytical Thinking
+# Conclusion
 
----
+This project demonstrates the importance of data cleaning in the data analytics pipeline. Raw data was successfully transformed into a clean, structured, and analysis-ready dataset using Python. Proper handling of missing values, duplicates, and formatting issues significantly improved data quality and usability.
 
-## Files Included
+# Author
 
-### Raw Dataset
-Original dataset before cleaning.
-
-### Cleaned Dataset
-`cleaned_dataset.csv`
-
-Contains the cleaned and validated data ready for analysis.
-
-### Project Documentation
-Project instructions and requirements provided by DecodeLabs.
-
----
-
-## Conclusion
-
-Data cleaning is a critical step in the data analytics lifecycle. This project focused on transforming raw and potentially unreliable data into a clean, consistent, and analysis-ready dataset. By handling missing values, removing duplicates, correcting formatting issues, and validating the final output, the dataset became suitable for further analytical tasks such as Exploratory Data Analysis (EDA), visualization, and business reporting.
-
----
-
-## Author
-
-**Zunair Talpur**
-
+**Zulqarnain Talpur**
 Data Analytics Intern
-
 DecodeLabs Industrial Training Program
