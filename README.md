@@ -113,11 +113,11 @@ After cleaning:
 
 The final output is a cleaned dataset:
 
-✔ Free from duplicates
-✔ Standardized format
-✔ Missing values handled
-✔ Ready for EDA
-✔ Suitable for analytics and machine learning
+* Free from duplicates
+*  Standardized format
+*  Missing values handled
+*  ready for EDA
+*  Suitable for analytics and machine learning
 
 
 # Conclusion
@@ -127,5 +127,7 @@ This project demonstrates the importance of data cleaning in the data analytics 
 # Author
 
 **Zulqarnain Talpur**
-Data Analytics Intern
-DecodeLabs Industrial Training Program
+
+**Data Analytics Intern**
+
+**DecodeLabs Industrial Training Program.**
