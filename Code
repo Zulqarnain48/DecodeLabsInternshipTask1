@@ -1,4 +1,4 @@
-Data Cleaning Workflow
+**Data Cleaning Workflow**
 
 import pandas as pd
 
@@ -13,7 +13,7 @@ df.info()
 print('\nOriginal Missing values:')
 display(df.isnull().sum())
 
-Handling Missing Values
+**Handling Missing Values**
 Based on the initial inspection, only the coupon_code column has missing values. We have two primary approaches for handling these:
 
 Filling missing values: Replacing NaN values with a suitable substitute (e.g., a default string like 'No Coupon', the mean/median for numerical data, or the mode for categorical data). This approach helps retain the rows and thus, more data.
@@ -30,7 +30,7 @@ df_cleaned['CouponCode'] = df_cleaned['CouponCode'].fillna('No Coupon')
 print('\nMissing values after filling NaNs in CouponCode:')
 display(df_cleaned.isnull().sum())
 
-Removing Duplicates
+**Removing Duplicates**
 Now, let's identify and remove any duplicate rows to ensure data uniqueness.
 
 initial_rows = df_cleaned.shape[0]
@@ -40,7 +40,7 @@ duplicate_rows_removed = initial_rows - df_cleaned.shape[0]
 print(f"\nNumber of duplicate rows removed: {duplicate_rows_removed}")
 print(f"DataFrame shape after removing duplicates: {df_cleaned.shape}")
 
-Correcting Data Formats
+**Correcting Data Formats**
 This step involves standardizing column names (lowercase, replace spaces with underscores) and ensuring data types are appropriate for analysis. Based on df.info(), Date is already datetime, and there's no Age column to convert.
 
 # Standardize column names
@@ -61,7 +61,7 @@ display(df_cleaned.isnull().sum())
 print('\nCleaned DataFrame Head:')
 display(df_cleaned.head())
 
-Download Cleaned Dataset
+**Download Cleaned Dataset**
 You can download the cleaned dataset as a CSV file using the following cell.
 
 from google.colab import files
