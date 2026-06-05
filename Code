@@ -1,0 +1,73 @@
+Data Cleaning Workflow
+
+import pandas as pd
+
+# Load the dataset
+file_path = '/content/drive/MyDrive/Colab Notebooks/Dataset for Data Analytics.xlsx'
+df = pd.read_excel(file_path)
+
+print('Original DataFrame Head:')
+display(df.head())
+print('\nOriginal DataFrame Info:')
+df.info()
+print('\nOriginal Missing values:')
+display(df.isnull().sum())
+
+Handling Missing Values
+Based on the initial inspection, only the coupon_code column has missing values. We have two primary approaches for handling these:
+
+Filling missing values: Replacing NaN values with a suitable substitute (e.g., a default string like 'No Coupon', the mean/median for numerical data, or the mode for categorical data). This approach helps retain the rows and thus, more data.
+Removing rows with missing values: Dropping rows that contain NaN values. This is suitable when the number of missing values is small, or when the missingness is critical and cannot be accurately imputed.
+For coupon_code, we will fill the missing values with 'No Coupon' to avoid losing approximately 25% of our data, as dropping rows for this particular column might not be
+the most appropriate strategy for data retention.
+
+# Create a copy to avoid SettingWithCopyWarning later if 'df' is used elsewhere
+df_cleaned = df.copy()
+
+# Fill missing values in 'CouponCode' with 'No Coupon'
+df_cleaned['CouponCode'] = df_cleaned['CouponCode'].fillna('No Coupon')
+
+print('\nMissing values after filling NaNs in CouponCode:')
+display(df_cleaned.isnull().sum())
+
+Removing Duplicates
+Now, let's identify and remove any duplicate rows to ensure data uniqueness.
+
+initial_rows = df_cleaned.shape[0]
+df_cleaned.drop_duplicates(inplace=True)
+duplicate_rows_removed = initial_rows - df_cleaned.shape[0]
+
+print(f"\nNumber of duplicate rows removed: {duplicate_rows_removed}")
+print(f"DataFrame shape after removing duplicates: {df_cleaned.shape}")
+
+Correcting Data Formats
+This step involves standardizing column names (lowercase, replace spaces with underscores) and ensuring data types are appropriate for analysis. Based on df.info(), Date is already datetime, and there's no Age column to convert.
+
+# Standardize column names
+df_cleaned.columns = df_cleaned.columns.str.lower().str.replace(' ', '_')
+
+# Convert 'date' column to datetime objects (though it might already be)
+df_cleaned['date'] = pd.to_datetime(df_cleaned['date'], errors='coerce')
+
+print('\nStandardized Column Names:')
+print(df_cleaned.columns)
+
+print('\nDataFrame Info after data type correction:')
+df_cleaned.info()
+
+print('\nMissing values after type conversion (should be 0):')
+display(df_cleaned.isnull().sum())
+
+print('\nCleaned DataFrame Head:')
+display(df_cleaned.head())
+
+Download Cleaned Dataset
+You can download the cleaned dataset as a CSV file using the following cell.
+
+from google.colab import files
+
+output_file_name = 'cleaned_dataset.csv'
+df_cleaned.to_csv(output_file_name, index=False)
+
+print(f"Cleaned dataset saved as '{output_file_name}'")
+files.download(output_file_name)
