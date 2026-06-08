@@ -121,15 +121,15 @@ The final output is a cleaned dataset:
 
 # How to run this Project?
 
--Step 1: Download ZIP file from github.
+- Step 1: Download ZIP file from github.
 
--Setp 2: Go to google Colab.
+- Setp 2: Go to google Colab.
 
--step 3: Move Dataset to drive and mount it.
+- step 3: Move Dataset to drive and mount it.
 
--Step 3: Import the DecodeLabsInternshipTask1 into notebook.
+- Step 3: Import the DecodeLabsInternshipTask1 into notebook.
 
--Step 4: Run the NoteBook.
+- Step 4: Run the NoteBook.
 
 # Conclusion
 
